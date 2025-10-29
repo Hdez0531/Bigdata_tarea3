@@ -16,3 +16,9 @@ python3 kafka_producer.py
 
 # 5 En otra terminal (no cierres la anterior), ejecuta el consumidor con Spark Streaming
 spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.3 spark_streaming_consumer.py
+
+Cuando ejecutes el consumidor, verás que Spark empieza a procesar los datos que el productor está enviando cada dos segundos.
+Y los resultados aparecerán en tu consola y en el archivo CSV que configuraste en:
+/home/bigdatavm/spark_output_promedios
+
+
