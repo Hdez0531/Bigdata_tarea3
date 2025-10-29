@@ -1,0 +1,16 @@
+Paso 1: Iniciar Zookeeper y Kafka
+sudo /opt/Kafka/bin/zookeeper-server-start.sh /opt/Kafka/config/zookeeper.properties &
+sudo /opt/Kafka/bin/kafka-server-start.sh /opt/Kafka/config/server.properties &
+Paso 2: Crear el topic
+sudo /opt/Kafka/bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic sensor_data
+Paso 3: Ejecutar el productor
+python3 kafka_producer.py
+Paso 4: Ejecutar el consumidor con Spark
+spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.3 spark_streaming_consumer.py
+Paso 5: Visualizar resultados
+En consola: verás los promedios calculados por ventana de tiempo.
+
+En archivos CSV: resultados almacenados en /home/bigdatavm/spark_output_promedios.
+
+En interfaz web de Spark:
+http://localhost:4040
