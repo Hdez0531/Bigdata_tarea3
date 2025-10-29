@@ -2,21 +2,21 @@
 
 ## 🏫 Universidad Nacional Abierta y a Distancia (UNAD)
 **Curso:** Big Data  
-**Código:** 202016911  
+**Código:** 202016911_45 
 **Actividad:** Tarea 3 – Procesamiento de Datos con Apache Spark  
-**Autor:** [Leonardo Andres Hernandez Moreno]  
+**Autor:** Leonardo Andres Hernandez Moreno  
 **Repositorio:** [https://github.com/Hdez0531/Bigdata_tarea3](https://github.com/Hdez0531/Bigdata_tarea3)
 
 ---
 
 ## 🎯 Objetivo
-Implementar una solución de análisis de datos en tiempo real utilizando **Apache Spark Streaming** y **Apache Kafka**, aplicando los conceptos vistos sobre procesamiento en batch y en streaming.
+Implementar una solución de análisis de datos en tiempo real utilizando **Apache Spark Streaming** y **Apache Kafka**, simulando la llegada de datos de sensores (temperatura y humedad) y calculando promedios en ventanas de tiempo definidas.
 
 ---
 
 ## ⚙️ Requisitos previos
-- Máquina virtual con Hadoop y Spark configurados  
-- Python 3.x  
-- Librerías necesarias:
+- Máquina virtual configurada con Hadoop y Spark.  
+- Python 3.x instalado.  
+- Dependencias:
   ```bash
-  pip install kafka-python pyspark
+  pip install -r requirements.txt
