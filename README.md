@@ -4,7 +4,7 @@
 **Curso:** Big Data  
 **Código:** 202016911  
 **Actividad:** Tarea 3 – Procesamiento de Datos con Apache Spark  
-**Autor:** [Tu nombre completo]  
+**Autor:** [Leonardo Andres Hernandez Moreno]  
 **Repositorio:** [https://github.com/Hdez0531/Bigdata_tarea3](https://github.com/Hdez0531/Bigdata_tarea3)
 
 ---
