@@ -33,9 +33,7 @@ data = data.withColumn("timestamp", to_timestamp(col("timestamp"), "yyyy-MM-dd H
 # Calcular promedios en ventanas de 10 segundos con watermark de 30 s
 promedios = data \
     .withWatermark("timestamp", "30 seconds") \
-    .groupBy(
-        window(col("timestamp"), "10 seconds")
-    ) \
+    .groupBy(window(col("timestamp"), "10 seconds")) \
     .agg(
         avg("temperatura").alias("promedio_temp"),
         avg("humedad").alias("promedio_hum")
@@ -60,9 +58,9 @@ csv_query = promedios.writeStream \
     .format("csv") \
     .option("path", "/home/bigdatavm/spark_output_promedios") \
     .option("checkpointLocation", "/home/bigdatavm/spark_output_promedios/checkpoint") \
-    .option("truncate", False) \
     .start()
 
 # Mantener ambos flujos activos
 console_query.awaitTermination()
 csv_query.awaitTermination()
+
